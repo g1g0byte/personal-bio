@@ -1,4 +1,4 @@
-p, h1, h2, h3 {
+p, h1, h2, h3, a {
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
@@ -17,38 +17,78 @@ h1, h2, h3, #title {
     text-align: center;
 }
 
-nav {
+.navbar {
     background-color: rgb(20, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 55px;
+    min-width: 100%;
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-shadow: 0 0 20px 0 black;
     transition: top 0.3s;
 }
 
-nav * {
-    display: inline;
+.navbar__Items {
+    display:flex;
+    top: 0;
 }
 
-nav li {
-    margin: 20px
-}
-
-nav li a {
+.navbar__Link {
+    padding-right: 10px;
     color: white;
-    font-weight: 400;
+}
+
+.navbar__Link a{
     text-decoration: none;
+}
+
+.navbar__Link-toggle {
+    display: none;
+  }
+
+
+@media only screen and (max-width: 768px) {
+    .navbar__Items,
+    .navbar {
+      flex-direction: column;
+      align-self: flex-start;
+    }
+      
+  .navbar__Items {
+      display:none;
+    }
+      
+  .navbar__Items--right {
+      margin-left:0;
+    }
+      
+  .navbar__ToggleShow {
+      display: flex;
+    }
+      
+  .navbar__Link-toggle {
+      align-self: flex-end;
+      display: initial;
+      position: absolute;
+      cursor: pointer;
+      padding-right: 20px;
+    } 
+}
+
+@media only screen and (max-width: 768px) {
+    .section {
+        width: 300px;
+    }
 }
 
 .section {
     margin: auto;
-    width: 1250px;
+    width: 90%;
     margin-top: 300px;
     padding: 15px;
     background-color: rgb(2, 1, 1);
@@ -56,19 +96,18 @@ nav li a {
 
 #gradesSection {
     display: flex;
-    width: 1000px;
     justify-content: center;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
 }
 
 .grade {
     padding: 10px;
     margin: 10px;
-    width: 600px;
     border: 1px solid lightgrey;
     border-radius: 5px;
     box-shadow: 0 0 3px 0 white;
+    flex-grow: 1;
 }
 
 body {
@@ -78,9 +117,8 @@ body {
 }
 
 #title {
-    height: 80vh;
-    left: 0;
-    top: 0;
+    height: 70vh;
+    min-width: 100%;
     margin: 0;
     /* Background gradient animation */
     background: linear-gradient(270deg, #4bcf93 , #4b79cf, #a24bcf );
@@ -94,8 +132,8 @@ body {
 
 #title h1 {
     font-weight: 400;
-    font-size: 80px;
-    padding-top: 12%;
+    font-size:calc(50% + 6vw);
+    padding-top: 30vh;
     margin: 0;
 }
 
@@ -127,7 +165,7 @@ html {
 
 .icon{
     color: white;
-    font-size: 40px;
+    font-size:calc(50% + 3vw);
     margin: 10px;
     text-decoration: none;
 }
