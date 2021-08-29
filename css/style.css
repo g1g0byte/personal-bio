@@ -1,0 +1,135 @@
+p, h1, h2, h3 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 22px;
+}
+
+h1, h2, h3, #title {
+    text-align: center;
+}
+
+nav {
+    background-color: rgb(20, 20, 20);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px 0 black;
+    transition: top 0.3s;
+}
+
+nav * {
+    display: inline;
+}
+
+nav li {
+    margin: 20px
+}
+
+nav li a {
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.section {
+    margin: auto;
+    width: 1250px;
+    margin-top: 300px;
+    padding: 15px;
+    background-color: rgb(2, 1, 1);
+}
+
+#gradesSection {
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.grade {
+    padding: 10px;
+    margin: 10px;
+    width: 600px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 white;
+}
+
+body {
+    background-color: rgb(2, 1, 1);
+    padding: 0;
+    margin: 0;
+}
+
+#title {
+    height: 80vh;
+    left: 0;
+    top: 0;
+    margin: 0;
+    /* Background gradient animation */
+    background: linear-gradient(270deg, #4bcf93 , #4b79cf, #a24bcf );
+    background-size: 300% 300%;
+    background-attachment: fixed;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+#title h1 {
+    font-weight: 400;
+    font-size: 80px;
+    padding-top: 12%;
+    margin: 0;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.section {
+    display: block;
+    position: relative;
+    top: -60px;
+}
+
+.icon{
+    color: white;
+    font-size: 40px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.navAnchor h2 {padding-top: 80px; margin-top: -80px;}

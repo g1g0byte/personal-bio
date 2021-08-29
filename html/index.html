@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/610bb31116.js" crossorigin="anonymous"></script>
+    <title>Gabriel's Bio</title>
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-55px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#aboutMe">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#grades">Grades</a></li>
+                <li><a href="#personalStatement">Personal Statement</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="title">
+            <h1>Gabriel MacCallum</h1>
+            <a href="https://github.com/g1g0byte" target="_blank" rel="noopener noreferrer"
+                class="fab fa-github-square icon"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="fab fa-linkedin icon"></a>
+            <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gabriel.maccallum1@gmail.com"
+                target="_blank" rel="noopener noreferrer" class="fas fa-envelope-square icon"></a>
+        </div>
+
+        <section id="aboutMeSection" class="section">
+            <a name="aboutMe" class="navAnchor">
+                <h2>About Me:</h2>
+            </a>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Unde iure ullam eius voluptas explicabo recusandae dignissimos laudantium dolorem suscipit quod!
+                Velit, fuga iure distinctio corporis harum nobis enim optio sapiente?
+            </p>
+        </section>
+
+        <section id="projectsSection" class="section">
+            <a name="projects" class="navAnchor">
+                <h2>Here are some of my coding projects:</h2>
+            </a>
+            <p>mmmmm yes much wow. Insert images and gifs here!</p>
+            <script
+                src="https://edgithub.vercel.app/embed.js?target=https%3A%2F%2Fgithub.com%2Fg1g0byte%2Froman-numerals-converter%2Fblob%2Fmain%2Fmain.py&style=vs2015&showBorder=on"></script>
+            <script
+                src="https://edgithub.vercel.app/embed.js?target=https%3A%2F%2Fgithub.com%2Fg1g0byte%2Fetsy-sheet-tool-showcase%2Fblob%2Fmain%2Fmain.py&style=vs2015&showBorder=on"></script>
+            <script
+                src="https://edgithub.vercel.app/embed.js?target=https%3A%2F%2Fgithub.com%2Fg1g0byte%2FCurrency-converter%2Fblob%2Fmaster%2Fmain.py%3Fts%3D4&style=vs2015&showBorder=on"></script>
+        </section>
+
+        <section id="gradesSection" class="section">
+            <a name="grades" class="navAnchor">
+                <h2>My Grades:</h2>
+            </a>
+            <div class="grade">
+                <p>Title: SQA Scottish Highers in Computing Science C816</p>
+                <p>Result: <b>A</b></p>
+            </div>
+            <div class="grade">
+                <p>Title: SQA Scottish Highers in Mathematics C847</p>
+                <p>Result: <b>A</b></p>
+            </div>
+            <div class="grade">
+                <p>Title: SQA Scottish Highers in Physics C857</p>
+                <p>Result: <b>A</b></p>
+            </div>
+            <div class="grade">
+                <p>Title: Foundation Apprenticeship (SCQF 6) in IT: Software Development
+                    Development</p>
+                <p>Result: <b>Year 1</b></p>
+            </div>
+            <div class="grade">
+                <p>Title: SQA Scottish Highers in English C824</p>
+                <p>Result: <b>B</b></p>
+            </div>
+            <div class="grade">
+                <p>Title: National 5 in Engineering Science</p>
+                <p>Result: <b>A</b></p>
+            </div>
+
+        </section>
+
+        <section id="personalStatementSection" class="section">
+            <a name="personalStatement" class="navAnchor">
+                <h2>My Personal Statement:</h2>
+            </a>
+            <p>I am very cool. I can do this and that. I am veeeery hard working!</p>
+        </section>
+
+        <section id="contactSection" class="section">
+            <a name="contac" class="navAnchor">
+                <h2>Contact Me:</h2>
+            </a>
+        </section>
+    </main>
+</body>
+
+</html>
