@@ -1,21 +1,39 @@
-// toggles nav bar based on screen size
-function classToggle() {
-    const navs = document.querySelectorAll('.navbar__Items')
 
+// Hide scrollbar on scroll down
+let full_mobile_nav = false
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+    if (full_mobile_nav !== true) {
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+            document.getElementById("navbar__Items__wrapper").className = "navbar__Items"
+        } else {
+            document.getElementById("navbar").style.top = "-200px";
+            document.getElementById("navbar__Items__wrapper").className = "navbar__Items"
+        }
+    }
+    prevScrollpos = currentScrollPos;
+}
+
+// toggles nav bar based on screen size
+function toggleMobileNav() {
+    const navs = document.querySelectorAll('.navbar__Items')
     navs.forEach(nav => nav.classList.toggle('navbar__ToggleShow'));
 }
 
 document.querySelector('.navbar__Link-toggle')
-    .addEventListener('click', classToggle);
+    .addEventListener('click', () => {
+        toggleMobileNav();
+        toggleNavScrollDisappear();
+    });
 
-// Hide scrollbar on scroll down
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
+const toggleNavScrollDisappear = () => {
+    if (full_mobile_nav === false) {
+        full_mobile_nav = true
     } else {
-        document.getElementById("navbar").style.top = "-55px";
+        full_mobile_nav = false
     }
-    prevScrollpos = currentScrollPos;
 }
+
+const enableNavScrollDisappear = () => { full_mobile_nav = false }
