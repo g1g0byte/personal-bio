@@ -1,4 +1,3 @@
-
 // Hide scrollbar on scroll down
 let full_mobile_nav = false
 let prevScrollpos = window.pageYOffset;
@@ -29,11 +28,12 @@ document.querySelector('.navbar__Link-toggle')
     });
 
 const toggleNavScrollDisappear = () => {
-    if (full_mobile_nav === false) {
-        full_mobile_nav = true
-    } else {
-        full_mobile_nav = false
-    }
+    full_mobile_nav = !full_mobile_nav
 }
 
-const enableNavScrollDisappear = () => { full_mobile_nav = false }
+// When a navbar link is clicked disable the fullscreen mobile navigation
+document.querySelectorAll('.navbar__Link').forEach(item => {
+    item.addEventListener('click', () => {
+        full_mobile_nav = false
+    })
+})
