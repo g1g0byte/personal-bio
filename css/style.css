@@ -17,6 +17,27 @@ h1, h2, h3, #title {
     text-align: center;
 }
 
+#scroll-down-arrow, #scroll-up-arrow {
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-decoration: none;
+}
+
+#scroll-down-arrow {
+    position: absolute;
+    top: 80%;
+    font-size:calc(50% + 3vw);
+}
+
+#scroll-up-arrow {
+    position: fixed;
+    top: 90%;
+    font-size:calc(50% + 3vw);
+    opacity: 70%;
+    z-index: 2;
+}
+
 .navbar {
     background-color: rgb(20, 20, 20);
     display: flex;
@@ -68,20 +89,14 @@ h1, h2, h3, #title {
     }
     .navbar__ToggleShow .navbar__Link{
         align-self: flex-start;
-        font-size:calc(100% + 5vw);
-        margin-bottom: 2vh;
+        font-size:calc(100% + 3vw);
+        margin-bottom: 7vh;
     }
     .navbar__Link-toggle {
         align-self: flex-end;
         display: initial;
         cursor: pointer;
     } 
-}
-
-@media only screen and (max-width: 768px) {
-    .section {
-        width: 90vw;
-    }
 }
 
 .section {
@@ -115,7 +130,12 @@ body {
 }
 
 #title {
-    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+
+    height: 100vh;
     min-width: 100%;
     margin: 0;
     /* Background gradient animation */
@@ -129,10 +149,19 @@ body {
 }
 
 #title h1 {
+    display: flex;
+    justify-content: center;
+
     font-weight: 400;
-    font-size:calc(50% + 6vw);
-    padding-top: 30vh;
+    font-size:calc(100% + 5vw);
+    padding-top: 10vh;
     margin: 0;
+}
+
+.title-links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 @-webkit-keyframes AnimationName {
@@ -200,4 +229,22 @@ footer {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .section {
+        width: 90vw;
+        margin-top: 40px
+    }
+    #title {
+        font-size:calc(10% + 4vw);
+        padding-top: 0px;
+        margin-bottom: 100px;
+    }
+    p {
+        font-size: calc(30% + 2vw);
+    }
+    h2 {
+        font-size: calc(50% + 2vw);
+    }
 }

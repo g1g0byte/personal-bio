@@ -1,39 +1,48 @@
-// Hide scrollbar on scroll down
+const scroll_up_arrow = document.getElementById("scroll-up-arrow");
+
+// Hide navbar on scroll down
+const navbar = document.getElementById("navbar");
+const navbar_items_wrapper = document.getElementById("navbar__Items__wrapper");
 let full_mobile_nav = false
 let prevScrollpos = window.pageYOffset;
+
 window.onscroll = function () {
     let currentScrollPos = window.pageYOffset;
-    if (full_mobile_nav !== true) {
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-            document.getElementById("navbar__Items__wrapper").className = "navbar__Items"
-        } else {
-            document.getElementById("navbar").style.top = "-200px";
-            document.getElementById("navbar__Items__wrapper").className = "navbar__Items"
-        }
+    if (prevScrollpos > currentScrollPos) {
+        showNavBar()
+    } else {
+        hideNavBar()
     }
     prevScrollpos = currentScrollPos;
 }
 
-// toggles nav bar based on screen size
+function showNavBar() {
+    navbar.style.top = "0";
+    navbar_items_wrapper.className = "navbar__Items"
+}
+
+function hideNavBar() {
+    navbar.style.top = "-200px";
+    navbar_items_wrapper.className = "navbar__Items"
+}
+
+const navbar_items = document.querySelectorAll('.navbar__Items')
+
 function toggleMobileNav() {
-    const navs = document.querySelectorAll('.navbar__Items')
-    navs.forEach(nav => nav.classList.toggle('navbar__ToggleShow'));
+    navbar_items.forEach(navbar_items => navbar_items.classList.toggle('navbar__ToggleShow'));
 }
 
 document.querySelector('.navbar__Link-toggle')
     .addEventListener('click', () => {
         toggleMobileNav();
-        toggleNavScrollDisappear();
     });
 
-const toggleNavScrollDisappear = () => {
-    full_mobile_nav = !full_mobile_nav
-}
 
-// When a navbar link is clicked disable the fullscreen mobile navigation
-document.querySelectorAll('.navbar__Link').forEach(item => {
-    item.addEventListener('click', () => {
-        full_mobile_nav = false
-    })
-})
+window.addEventListener("scroll", function () {
+    if (window.scrollY < 700) {
+        scroll_up_arrow.style.display = "none";
+    }
+    else {
+        scroll_up_arrow.style.display = "block";
+    }
+}, false);
