@@ -31,6 +31,7 @@ h1, h2, h3, #title {
 }
 
 #scroll-up-arrow {
+    display: none;
     position: fixed;
     top: 90%;
     font-size:calc(50% + 3vw);
@@ -39,7 +40,6 @@ h1, h2, h3, #title {
 }
 
 .navbar {
-    background-color: rgb(20, 20, 20);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,10 +48,11 @@ h1, h2, h3, #title {
     left: 0;
     right: 0;
     min-width: 100%;
-    z-index: 1;
+    background-color: rgb(20, 20, 20);
     box-shadow: 0 0 20px 0 black;
     transition: top 0.5s;
-    padding:20px;
+    padding: 20px;
+    z-index: 1;
 }
 
 .navbar__Items {
@@ -63,40 +64,23 @@ h1, h2, h3, #title {
     color: white;
 }
 
+
 .navbar__Link a{
     text-decoration: none;
 }
 
+#hamburger-icon {
+    font-size: 25px;
+}
+
 .navbar__Link-toggle {
     display: none;
-  }
+}
 
-
-@media only screen and (max-width: 768px) {
-    .navbar__Items,
-    .navbar {
-    flex-direction: column;
-    }
-        
-    .navbar__Items {
-        display:none;
-    }
-        
-    .navbar__ToggleShow {
-        display: flex;
-        height: 100vh;
-        padding-top: 10vh;
-    }
-    .navbar__ToggleShow .navbar__Link{
-        align-self: flex-start;
-        font-size:calc(100% + 3vw);
-        margin-bottom: 7vh;
-    }
-    .navbar__Link-toggle {
-        align-self: flex-end;
-        display: initial;
-        cursor: pointer;
-    } 
+.navAnchor h2 {
+    padding-top: 
+    80px; 
+    margin-top: -80px;
 }
 
 .section {
@@ -158,27 +142,6 @@ body {
     margin: 0;
 }
 
-.title-links-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
 
 html {
     scroll-behavior: smooth;
@@ -190,11 +153,37 @@ html {
     top: -60px;
 }
 
+.title-icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .icon{
     color: white;
     font-size:calc(50% + 3vw);
     margin: 10px;
     text-decoration: none;
+}
+
+.icon p{
+    line-height: 0; 
+    font-size: 0;
+    color: transparent; 
+}
+
+.button {
+    background-color: rgb(2, 1, 1);
+    border: 2px solid rgb(2, 1, 1);
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 .footer_icon{
@@ -215,36 +204,74 @@ footer {
     justify-content: center;
 }
 
-.navAnchor h2 {padding-top: 80px; margin-top: -80px;}
-
-.button {
-    background-color: rgb(2, 1, 1);
-    border: 2px solid rgb(2, 1, 1);
-    border-radius: 12px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
 @media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 12px;
+    }
+
+    .navbar, .navbar__Items {
+        flex-direction: column;
+    }
+        
+    .navbar__Items {
+        display:none;
+    }
+        
+    .navbar__ToggleShow {
+        display: flex;
+        height: 100vh;
+        padding-top: 10vh;
+    }
+
+    .navbar__ToggleShow .navbar__Link{
+        align-self: flex-start;
+        font-size:calc(100% + 3vw);
+        margin-bottom: 7vh;
+    }
+
+    .navbar__Link-toggle {
+        align-self: flex-end;
+        display: initial;
+        cursor: pointer;
+    } 
+
     .section {
         width: 90vw;
         margin-top: 40px
     }
+
     #title {
         font-size:calc(10% + 4vw);
         padding-top: 0px;
         margin-bottom: 100px;
     }
+
     p {
         font-size: calc(30% + 2vw);
     }
+
     h2 {
         font-size: calc(50% + 2vw);
     }
+
+    .icon{
+        font-size:calc(50% + 5vw);
+    }
+}
+
+/* Title background animation */
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }

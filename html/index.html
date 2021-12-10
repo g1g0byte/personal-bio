@@ -15,131 +15,137 @@
 </head>
 
 <body>
-    <a name="topOfPage" class="navAnchor">
-        <header>
-            <div id="navbar" class="navbar">
-                <div class="navbar__Link navbar__Link-toggle">
-                    <i class="fas fa-bars"></i>
+    <a name="topOfPage" class="navAnchor"></a>
+    <header>
+        <div id="navbar" class="navbar">
+            <a id="hamburger-icon" class="fas fa-bars navbar__Link navbar__Link-toggle"></a>
+            <nav id="navbar__Items__wrapper" class="navbar__Items">
+                <div class="navbar__Link">
+                    <a href="#aboutMe">About Me</a>
                 </div>
-                <nav id="navbar__Items__wrapper" class="navbar__Items">
-                    <div class="navbar__Link">
-                        <a href="#aboutMe">About Me</a>
-                    </div>
-                    <div class="navbar__Link">
-                        <a href="#projects">Projects</a>
-                    </div>
-                    <div class="navbar__Link">
-                        <a href="#grades">Grades</a>
-                    </div>
-                    <div class="navbar__Link">
-                        <a href="#personalStatement">Personal Statement</a>
-                    </div>
-                    <div class="navbar__Link">
-                        <a href="#contact" onclick="enableNavScrollDisappear()">Contact</a>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <main>
-            <a href="#aboutMe" id="scroll-down-arrow" class="fa fa-arrow-circle-down" aria-hidden="true"></a>
-            <a href="#topOfPage" id="scroll-up-arrow" class="fa fa-angle-up" aria-hidden="true"></a>
-            <div id="title">
-                <h1>Gabriel MacCallum</h1>
-                <div class="title-links-container">
-                    <a href="https://github.com/g1g0byte" target="_blank" rel="noopener noreferrer"
-                        class="fab fa-github-square icon"></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="fab fa-linkedin icon title-links"></a>
-                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gabriel.maccallum1@gmail.com"
-                        target="_blank" rel="noopener noreferrer" class="fas fa-envelope-square icon title-links"></a>
+                <div class="navbar__Link">
+                    <a href="#projects">Projects</a>
                 </div>
-            </div>
-
-            <section id="aboutMeSection" class="section">
-                <a name="aboutMe" class="navAnchor">
-                    <h2>About Me:</h2>
-                </a>
-                <p style="text-align: center;">Hi, my name is Gabriel MacCallum. I am a highshool student with a passion
-                    for
-                    computers and programming.
-                    In my spare time I like to create programs using Python and extensions using JavaScript.
-                </p>
-            </section>
-
-            <section id="projectsSection" class="section">
-                <a name="projects" class="navAnchor">
-                    <h2>Here are some of my coding projects:</h2>
-                </a>
-                <p>mmmmm yes much wow. Insert images and gifs here!</p>
-                <script
-                    src="https://edgithub.vercel.app/embed.js?target=https%3A%2F%2Fgithub.com%2Fg1g0byte%2Froman-numerals-converter%2Fblob%2Fmain%2Fmain.py&style=vs2015&showBorder=on"></script>
-                <script
-                    src="https://edgithub.vercel.app/embed.js?target=https%3A%2F%2Fgithub.com%2Fg1g0byte%2Fetsy-sheet-tool-showcase%2Fblob%2Fmain%2Fmain.py&style=vs2015&showBorder=on"></script>
-                <script
-                    src="https://edgithub.vercel.app/embed.js?target=https%3A%2F%2Fgithub.com%2Fg1g0byte%2FCurrency-converter%2Fblob%2Fmaster%2Fmain.py%3Fts%3D4&style=vs2015&showBorder=on"></script>
-            </section>
-
-            <section id="gradesSection" class="section">
-                <a name="grades" class="navAnchor">
-                    <h2>My Grades:</h2>
-                </a>
-                <div class="grade">
-                    <p>Title: SQA Scottish Highers in Computing Science C816</p>
-                    <p>Result: <b>A</b></p>
+                <div class="navbar__Link">
+                    <a href="#grades">Grades</a>
                 </div>
-                <div class="grade">
-                    <p>Title: SQA Scottish Highers in Mathematics C847</p>
-                    <p>Result: <b>A</b></p>
+                <div class="navbar__Link">
+                    <a href="#personalStatement">Personal Statement</a>
                 </div>
-                <div class="grade">
-                    <p>Title: SQA Scottish Highers in Physics C857</p>
-                    <p>Result: <b>A</b></p>
+                <div class="navbar__Link">
+                    <a href="#contact" onclick="enableNavScrollDisappear()">Contact</a>
                 </div>
-                <div class="grade">
-                    <p>Title: Foundation Apprenticeship (SCQF 6) in IT: Software Development
-                        Development</p>
-                    <p>Result: <b>Year 1</b></p>
-                </div>
-                <div class="grade">
-                    <p>Title: SQA Scottish Highers in English C824</p>
-                    <p>Result: <b>B</b></p>
-                </div>
-                <div class="grade">
-                    <p>Title: National 5 in Engineering Science</p>
-                    <p>Result: <b>A</b></p>
-                </div>
-
-            </section>
-
-            <section id="personalStatementSection" class="section">
-                <a name="personalStatement" class="navAnchor">
-                    <h2>My Personal Statement:</h2>
-                </a>
-                <p>Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit. Velit at fuga animi id,
-                    inventore nostrum autem, odio eos incidunt rerum eveniet libero fugit suscipit ab! Libero molestiae
-                    aliquam perferendis fugiat?
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe cum deleniti numquam. Tenetur
-                    molestias,
-                    consequatur amet a eaque cum vel accusantium placeat ipsa. Accusamus,
-                    laborum sed. Eaque quod vitae similique!</p>
-            </section>
-
-
-        </main>
-        <footer>
-            <a name="contact" class="navAnchor"></a>
-            <div id="footer_email">
-                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gabriel.maccallum1@gmail.com"
-                    target="_blank" rel="noopener noreferrer" class="button">Send an email</a>
-            </div>
-            <div id="footer_links">
+            </nav>
+        </div>
+    </header>
+    <main>
+        <a href="#aboutMe" id="scroll-down-arrow" class="fa fa-arrow-circle-down" aria-hidden="true"></a>
+        <a href="#topOfPage" id="scroll-up-arrow" class="fa fa-angle-up" aria-hidden="true"></a>
+        <div id="title">
+            <h1>Gabriel MacCallum</h1>
+            <div class="title-icons-container">
                 <a href="https://github.com/g1g0byte" target="_blank" rel="noopener noreferrer"
-                    class="fab fa-github-square footer_icon"></a>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="fab fa-linkedin footer_icon"></a>
-
+                    class="fab fa-github-square icon">
+                    <p>Github</p>
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="fab fa-linkedin icon title-links">
+                    <p>LinkedIn</p>
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gabriel.maccallum1@gmail.com"
+                    target="_blank" rel="noopener noreferrer" class="fas fa-envelope-square icon title-links">
+                    <p>Email Me</p>
+                </a>
             </div>
-        </footer>
-        <script src="../js/script.js" type="text/javascript"></script>
+        </div>
+
+        <section id="aboutMeSection" class="section">
+            <a name="aboutMe" class="navAnchor">
+                <h2>About Me:</h2>
+            </a>
+            <p style="text-align: center;">Hi, my name is Gabriel MacCallum. I am a highshool student with a
+                passion
+                for
+                computers and programming.
+                In my spare time I like to create programs using Python and extensions using JavaScript.
+            </p>
+        </section>
+
+        <section id="projectsSection" class="section">
+            <a name="projects" class="navAnchor">
+                <h2>Here are some of my coding projects:</h2>
+            </a>
+            <p>mmmmm yes much wow. Insert images and gifs here!</p>
+            <script
+                src="https://edgithub.vercel.app/embed.js?target=https%3A%2F%2Fgithub.com%2Fg1g0byte%2Froman-numerals-converter%2Fblob%2Fmain%2Fmain.py&style=vs2015&showBorder=on"></script>
+            <script
+                src="https://edgithub.vercel.app/embed.js?target=https%3A%2F%2Fgithub.com%2Fg1g0byte%2Fetsy-sheet-tool-showcase%2Fblob%2Fmain%2Fmain.py&style=vs2015&showBorder=on"></script>
+            <script
+                src="https://edgithub.vercel.app/embed.js?target=https%3A%2F%2Fgithub.com%2Fg1g0byte%2FCurrency-converter%2Fblob%2Fmaster%2Fmain.py%3Fts%3D4&style=vs2015&showBorder=on"></script>
+        </section>
+
+        <section id="gradesSection" class="section">
+            <a name="grades" class="navAnchor">
+                <h2>My Grades:</h2>
+            </a>
+            <div class="grade">
+                <p>Title: SQA Scottish Highers in Computing Science C816</p>
+                <p>Result: <b>A</b></p>
+            </div>
+            <div class="grade">
+                <p>Title: SQA Scottish Highers in Mathematics C847</p>
+                <p>Result: <b>A</b></p>
+            </div>
+            <div class="grade">
+                <p>Title: SQA Scottish Highers in Physics C857</p>
+                <p>Result: <b>A</b></p>
+            </div>
+            <div class="grade">
+                <p>Title: Foundation Apprenticeship (SCQF 6) in IT: Software Development
+                    Development</p>
+                <p>Result: <b>Year 1</b></p>
+            </div>
+            <div class="grade">
+                <p>Title: SQA Scottish Highers in English C824</p>
+                <p>Result: <b>B</b></p>
+            </div>
+            <div class="grade">
+                <p>Title: National 5 in Engineering Science</p>
+                <p>Result: <b>A</b></p>
+            </div>
+
+        </section>
+
+        <section id="personalStatementSection" class="section">
+            <a name="personalStatement" class="navAnchor">
+                <h2>My Personal Statement:</h2>
+            </a>
+            <p>Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Velit at fuga animi id,
+                inventore nostrum autem, odio eos incidunt rerum eveniet libero fugit suscipit ab! Libero
+                molestiae
+                aliquam perferendis fugiat?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe cum deleniti numquam. Tenetur
+                molestias,
+                consequatur amet a eaque cum vel accusantium placeat ipsa. Accusamus,
+                laborum sed. Eaque quod vitae similique!</p>
+        </section>
+
+
+    </main>
+    <footer>
+        <a name="contact" class="navAnchor"></a>
+        <div id="footer_email">
+            <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gabriel.maccallum1@gmail.com"
+                target="_blank" rel="noopener noreferrer" class="button">Send an email</a>
+        </div>
+        <div id="footer_links">
+            <a href="https://github.com/g1g0byte" target="_blank" rel="noopener noreferrer"
+                class="fab fa-github-square footer_icon"></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="fab fa-linkedin footer_icon"></a>
+
+        </div>
+    </footer>
+    <script src="../js/script.js" type="text/javascript"></script>
 </body>
 
 </html>
