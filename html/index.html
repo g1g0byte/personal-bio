@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="default">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" id="style-sheet-link" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
@@ -18,7 +18,9 @@
     <a name="topOfPage" class="navAnchor"></a>
     <header>
         <div id="navbar" class="navbar">
-            <a id="hamburger-icon" class="fas fa-bars navbar__Link navbar__Link-toggle"></a>
+            <div class="navbar__Link navbar__Link-toggle">
+                <i id="hamburger-icon" class="fas fa-bars "></i>
+            </div>
             <nav id="navbar__Items__wrapper" class="navbar__Items">
                 <div class="navbar__Link">
                     <a href="#aboutMe">About Me</a>
@@ -35,13 +37,17 @@
                 <div class="navbar__Link">
                     <a href="#contact" onclick="enableNavScrollDisappear()">Contact</a>
                 </div>
+                <div class="navbar__Link">
+                    <input type="checkbox" id="theme-switch-checkbox"></input>
+                    <label for="theme-switch-checkbox">Dark mode</label>
+                </div>
             </nav>
         </div>
     </header>
     <main>
         <a href="#aboutMe" id="scroll-down-arrow" class="fa fa-arrow-circle-down" aria-hidden="true"></a>
         <a href="#topOfPage" id="scroll-up-arrow" class="fa fa-angle-up" aria-hidden="true"></a>
-        <div id="title">
+        <div id="title" class="gradientAnimation">
             <h1>Gabriel MacCallum</h1>
             <div class="title-icons-container">
                 <a href="https://github.com/g1g0byte" target="_blank" rel="noopener noreferrer"
@@ -57,7 +63,9 @@
                 </a>
             </div>
         </div>
-
+        <div id="gradientButtonContainer">
+            <button id="toggleGradientButton" onclick="toggleGradient()">Toggle gradient animation</button>
+        </div>
         <section id="aboutMeSection" class="section">
             <a name="aboutMe" class="navAnchor">
                 <h2>About Me:</h2>

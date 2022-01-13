@@ -1,15 +1,61 @@
-p, h1, h2, h3, a {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
+[data-theme="dark"] {
+    --body-color: rgb(0,0,0);
+    --text-color: rgb(255, 255, 255);
+    --text-font: 'Montserrat', sans-serif;
+    --p-weight: 300;
+    --h2-weight: 400;
+    --text-weight-change: 0;
+    --nav-background-color: rgb(20, 20, 20);
+    --hamburger-icon-color: rgb(255, 255, 255);
+    --section-color: rgb(2, 1, 1);
+    --title-default-color: rgb(81, 170, 230);
+    --title-text-color: rgb(255, 255, 255);
+    --title-gradient: linear-gradient(270deg, #4bcf93 , #4b79cf, #a24bcf);
+    --grade-border: 1px solid lightgrey;
+    --grade-shadow: 0 0 3px 0 white;
+    --footer-background-color: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+    --icon-color: rgb(255, 255, 255);
+}
+
+[data-theme="light"] {
+    --body-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --text-font: 'Montserrat', sans-serif;
+    --p-weight: 500;
+    --h2-weight: 600;
+    --nav-background-color: rgb(235, 235, 235);
+    --hamburger-icon-color: rgb(0,0,0);
+    --section-color: rgb(255, 255, 255);
+    --title-default-color: rgb(81, 170, 230);
+    --title-text-color: rgb(255, 255, 255);
+    --title-gradient: linear-gradient(270deg, #4bcf93 , #4b79cf, #a24bcf);
+    --grade-border: 2px solid rgb(0, 0, 0);
+    --grade-shadow: 0 0 3px 0 rgb(0, 0, 0);
+    --footer-background-color: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+    --icon-color: rgb(255, 255, 255);
+}
+
+
+html {scroll-behavior: smooth;}
+
+body {
+    background-color: var(--body-color);
+    padding: 0;
+    margin: 0;
+}
+
+p, h1, h2, h3, a, label {
+    color: var(--text-color);
+    font-family: var(--text-font);
 }
 
 p {
-    font-weight: 300;
+    font-weight: var(--p-weight);
     font-size: calc(30% + 1vw);
 }
 
 h2 {
-    font-weight: 400;
+    font-weight: var(--h2-weight);
     font-size: calc(50% + 1vw);
 }
 
@@ -20,7 +66,7 @@ h1, h2, h3, #title {
 #scroll-down-arrow, #scroll-up-arrow {
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: var(--icon-color);
     text-decoration: none;
 }
 
@@ -48,7 +94,7 @@ h1, h2, h3, #title {
     left: 0;
     right: 0;
     min-width: 100%;
-    background-color: rgb(20, 20, 20);
+    background-color: var(--nav-background-color);
     box-shadow: 0 0 20px 0 black;
     transition: top 0.5s;
     padding: 20px;
@@ -61,9 +107,8 @@ h1, h2, h3, #title {
 
 .navbar__Link {
     padding-right: 40px;
-    color: white;
+    color: var(--icon-color);
 }
-
 
 .navbar__Link a{
     text-decoration: none;
@@ -71,6 +116,7 @@ h1, h2, h3, #title {
 
 #hamburger-icon {
     font-size: 25px;
+    color: var(--hamburger-icon-color);
 }
 
 .navbar__Link-toggle {
@@ -83,12 +129,23 @@ h1, h2, h3, #title {
     margin-top: -80px;
 }
 
+#gradientButtonContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+#toggleGradientButton {
+    font-size: 1em;
+    z-index: 2;
+}
+
 .section {
     margin: auto;
     width: 90%;
     margin-top: 300px;
     padding: 15px;
-    background-color: rgb(2, 1, 1);
+    background-color: var(--section-color);
 }
 
 #gradesSection {
@@ -101,16 +158,10 @@ h1, h2, h3, #title {
 .grade {
     padding: 10px;
     margin: 10px;
-    border: 1px solid lightgrey;
+    border: var(--grade-border);
+    box-shadow: var(--grade-shadow);
     border-radius: 5px;
-    box-shadow: 0 0 3px 0 white;
     flex-grow: 1;
-}
-
-body {
-    background-color: rgb(2, 1, 1);
-    padding: 0;
-    margin: 0;
 }
 
 #title {
@@ -122,8 +173,11 @@ body {
     height: 100vh;
     min-width: 100%;
     margin: 0;
-    /* Background gradient animation */
-    background: linear-gradient(270deg, #4bcf93 , #4b79cf, #a24bcf );
+    background-color: var(--title-default-color);
+}
+
+.gradientAnimation {
+    background: var(--title-gradient);
     background-size: 300% 300%;
     background-attachment: fixed;
 
@@ -136,15 +190,11 @@ body {
     display: flex;
     justify-content: center;
 
+    color: var(--title-text-color);
     font-weight: 400;
     font-size:calc(100% + 5vw);
     padding-top: 10vh;
     margin: 0;
-}
-
-
-html {
-    scroll-behavior: smooth;
 }
 
 .section {
@@ -157,10 +207,16 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+}
+
+.title-icons-container em {
+    margin-left: 10px;
+    font-size: 1rem;
 }
 
 .icon{
-    color: white;
+    color: var(--icon-color);
     font-size:calc(50% + 3vw);
     margin: 10px;
     text-decoration: none;
@@ -187,7 +243,7 @@ html {
 }
 
 .footer_icon{
-    color: white;
+    color: var(--icon-color);
     font-size:3rem;
     margin: 10px;
     text-decoration: none;
@@ -198,13 +254,13 @@ footer {
     height: 200px;
     margin-top: 300px;
     flex: 1;
-    background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+    background-image: var(--footer-background-color);
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     .navbar {
         padding: 12px;
     }
@@ -240,10 +296,18 @@ footer {
         margin-top: 40px
     }
 
+    #gradientButtonContainer {
+        padding-top: 0.5vh;
+    }
+
+    #aboutMeSection {
+        margin-top: 100px
+    }
+
     #title {
         font-size:calc(10% + 4vw);
         padding-top: 0px;
-        margin-bottom: 100px;
+        margin-bottom: 5vh;
     }
 
     p {
