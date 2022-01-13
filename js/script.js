@@ -47,16 +47,23 @@ window.addEventListener("scroll", function () {
     }
 }, false);
 
-
+// Toggling title gradient animation //
 const title = document.getElementById("title");
 
 function toggleGradient() {
     if (title.classList.contains("gradientAnimation")) {
         title.classList.remove("gradientAnimation")
+        localStorage.setItem("gradient", false)
     }
     else {
         title.classList.add("gradientAnimation")
+        localStorage.setItem("gradient", true)
     }
+}
+
+// check if gradient should be off on start
+if (JSON.parse(localStorage.getItem("gradient")) == false) {
+    title.classList.remove("gradientAnimation")
 }
 
 // Theme switching //
