@@ -63,6 +63,10 @@ h1, h2, h3, #title {
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 #scroll-down-arrow, #scroll-up-arrow {
     left: 50%;
     transform: translateX(-50%);
@@ -101,16 +105,16 @@ h1, h2, h3, #title {
     z-index: 1;
 }
 
-.navbar__Items {
+.navbarItems {
     display:flex;
 }
 
-.navbar__Link {
+.navbarLink {
     padding-right: 40px;
     color: var(--icon-color);
 }
 
-.navbar__Link a{
+.navbarLink a{
     text-decoration: none;
 }
 
@@ -119,7 +123,7 @@ h1, h2, h3, #title {
     color: var(--hamburger-icon-color);
 }
 
-.navbar__Link-toggle {
+.navbarLink-toggle {
     display: none;
 }
 
@@ -265,27 +269,27 @@ footer {
         padding: 12px;
     }
 
-    .navbar, .navbar__Items {
+    .navbar, .navbarItems {
         flex-direction: column;
     }
         
-    .navbar__Items {
+    .navbarItems {
         display:none;
     }
         
-    .navbar__ToggleShow {
+    .navbarToggleShow {
         display: flex;
         height: 100vh;
         padding-top: 10vh;
     }
 
-    .navbar__ToggleShow .navbar__Link{
+    .navbarToggleShow .navbarLink{
         align-self: flex-start;
         font-size:calc(100% + 3vw);
         margin-bottom: 7vh;
     }
 
-    .navbar__Link-toggle {
+    .navbarLink-toggle {
         align-self: flex-end;
         display: initial;
         cursor: pointer;
